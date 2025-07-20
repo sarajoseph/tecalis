@@ -12,7 +12,7 @@
     <div class="hero__content">
       <img src="assets/img/logo.png" alt="Logo" class="hero__logo" />
       <div class="hero__text">
-        <h1 class="heading text-h1">Lorem ipsum dolor sit amet, consectetur adipis</h1>
+        <h1 class="text-h1">Lorem ipsum dolor sit amet, consectetur adipis</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut enim at lacus convallis molestie in at tellus. Fusce sed cursus elit. Suspendisse eu ultrices purus, nec feugiat justo. In non vehicula leo.</p>
       </div>
       <button class="button text-h4">Button</button>
@@ -21,6 +21,45 @@
       <img src="assets/img/img-1.png" alt="Phone screen" class="phone-image" />
     </div>
   </section>
-  
+  <section class="collapse">
+    <div class="collapse__content">      
+      <div class="collapse__image-desktop">
+        <img id="mainCollapseImage" src="assets/img/img-2.png" alt="Collapse image" />
+      </div>
+      <div class="collapse__container">
+        <h2 class="text-h2">Lorem ipsum dolor sit amet</h2>
+        <div class="collapse__items">
+          <details class="collapse__item" data-img="assets/img/img-2.png" open>
+            <summary class="collapse__item-tab text-h4">
+              Lorem ipsum
+              <span class="marker-icon"></span>
+            </summary>
+            <div class="collapse__item-container">
+              <img class="collapse__image" src="assets/img/img-2.png" alt="Laptop" />
+            </div>
+          </details>
+          <details class="collapse__item" data-img="assets/img/img-2.png">
+            <summary class="collapse__item-tab text-h4">
+              Lorem ipsum
+              <span class="marker-icon"></span>
+            </summary>
+            <div class="collapse__item-container">
+              <img class="collapse__image" src="assets/img/img-2.png" alt="Laptop" />
+            </div>
+          </details>
+          <details class="collapse__item" data-img="assets/img/img-2.png">
+            <summary class="collapse__item-tab text-h4">
+              Lorem ipsum
+              <span class="marker-icon"></span>
+            </summary>
+            <div class="collapse__item-container">
+              <img class="collapse__image" src="assets/img/img-2.png" alt="Laptop" />
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/collapse.js" ></script>
 </body>
 </html>

@@ -39,6 +39,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  justify-content: center;
   max-width: 1440px;
   padding: 2rem;
   @media (min-width: 769px) {
@@ -47,15 +48,18 @@ section {
     padding: 4rem 2rem;
   }
 }
-p {
+h1,h2,h3,h4,h5,p {
   margin: 0
 }
 
 /* Texts */
-.heading {
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5 {
   font-family: var(--main-font);
   font-weight: var(--bold-weight);
-  margin: 0;
 }
 .text-h1 {
   font-size: 3rem;
@@ -102,6 +106,105 @@ p {
 }
 .button:hover{
   background-color: var(--color-02);
+}
+
+/* Collapse */
+.collapse__content {
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+.collapse__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  max-width: 366px;
+  width: 100%;
+  @media (min-width: 769px) {
+    justify-content: center;
+    max-width: 400px;
+  }
+}
+.collapse__container .text-h2 {
+  text-align: center;
+  @media (min-width: 769px) {
+    text-align: left;
+  }
+}
+.collapse__image-desktop {
+  display: none;
+  @media (min-width: 769px) {
+    display: flex;
+    img {
+      border-radius: 1rem;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+.collapse__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.collapse__item {
+  border: 1px solid var(--color-03);
+  border-radius: .5rem;
+  fill: var(--color-06);
+  @media (min-width: 769px) {
+    border: none;
+  }
+}
+.collapse__item-tab {
+  align-items: center;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1rem;
+  &:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+.collapse__item[open] .collapse__item-tab {
+  background-color: var(--color-05);
+  border-radius: .5rem .5rem 0 0;
+  @media (min-width: 769px) {
+    border-radius: .5rem;
+  }
+  &:hover {
+    box-shadow: none;
+  }
+}
+.marker-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('../img/chevron-right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.collapse__item[open] .marker-icon {
+  background-image: url('../img/chevron-down.png');
+}
+.collapse__item-tab::-webkit-details-marker {
+  display: none;
+}
+.collapse__item-container {
+  padding: 1rem;
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.collapse__image {
+  border-radius: 1rem;
+  width: 100%;
 }
 
 section.hero {  
@@ -158,6 +261,7 @@ section.hero {
   }
   .phone-image {
     max-height: 282.42px;
+    max-width: 100%;
     @media (min-width: 769px) {
       max-height: 500px;
       width: 100%;
